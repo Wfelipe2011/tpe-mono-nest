@@ -27,6 +27,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/my-app/tsconfig.app.json"
       }
+    },
+    "calc": {
+      "type": "library",
+      "root": "libs/calc",
+      "entryFile": "index",
+      "sourceRoot": "libs/calc/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/calc/tsconfig.lib.json"
+      }
     }
   }
 }
