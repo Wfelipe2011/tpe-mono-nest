@@ -11,10 +11,11 @@ custom:
 provider:
   name: aws
   runtime: nodejs18.x
+  profile: allied-homologa 
 
 functions:
   main:
-    handler: ../../dist/apps/pipe-core-orders/main.handler
+    handler: dist/main.handler
     events:
       - http:
           method: ANY

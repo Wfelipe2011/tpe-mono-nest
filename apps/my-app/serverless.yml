@@ -11,10 +11,11 @@ custom:
 provider:
   name: aws
   runtime: nodejs18.x
+  profile: allied-homologa 
 
 functions:
   my-app:
-    handler: ../../dist/apps/my-app/main.handler
+    handler: dist/main.handler
     events:
       - http:
           method: ANY
