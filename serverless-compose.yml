@@ -1,0 +1,5 @@
+services:
+  mono-pipe-core-my-app:
+    path: apps/my-app
+  mono-pipe-core-orders:
+    path: apps/pipe-core-orders
