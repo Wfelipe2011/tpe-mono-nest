@@ -1,4 +1,4 @@
-service: mono-pipe-core-orders
+service: my-app-2
 
 plugins:
   - serverless-offline

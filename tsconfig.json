@@ -19,10 +19,10 @@
     "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
     "paths": {
-      "utils/calc": [
+      "@libs/calc": [
         "libs/calc/src"
       ],
-      "utils/calc/*": [
+      "@libs/calc/*": [
         "libs/calc/src/*"
       ]
     }

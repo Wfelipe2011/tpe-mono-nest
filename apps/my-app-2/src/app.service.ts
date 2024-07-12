@@ -1,5 +1,5 @@
+import { CalcService } from '@libs/calc';
 import { Injectable } from '@nestjs/common';
-import { CalcService } from 'utils/calc';
 
 @Injectable()
 export class AppService {

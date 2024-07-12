@@ -1,5 +1,5 @@
 {
-  "name": "pipe-core-orders",
+  "name": "monorepo-nestjs-serverless",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -12,14 +12,15 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./apps/pipe-core-orders/test/jest-e2e.json",
-    "sls:build:orders": "nest build pipe-core-orders --builder webpack --watch",
-    "sls:build:my-app": "nest build my-app --builder webpack --watch",
+    "test:e2e": "jest --config ./apps/my-app-2/test/jest-e2e.json",
+    "sls:build:my-app-2": "nest build my-app-2 --builder webpack --watch",
+    "sls:build:my-app-1": "nest build my-app-1 --builder webpack --watch",
     "sls:build": "concurrently \"npm run sls:build:*\"",
-    "sls:start:dev:orders": "sls mono-pipe-core-orders:offline --stage dev --reloadHandler --noPrependStageInUrl",
-    "sls:start:dev:my-app": "sls mono-pipe-core-my-app:offline --stage dev --reloadHandler --noPrependStageInUrl",
-    "sls:start:dev": "concurrently \"npm run sls:start:dev:*\"",
-    "sls:deploy": "npx sls deploy"
+    "sls:start:dev:my-app-2": "sls my-app-2:offline --stage dev --reloadHandler --noPrependStageInUrl",
+    "sls:start:dev:my-app-1": "SLS_DEBUG=* sls my-app-1:offline --stage dev --reloadHandler --noPrependStageInUrl",
+    "sls:start:dev": "concurrently \"npm run sls:start:dev:*\" \"npm run sls:build:*\"",
+    "sls:deploy": "npx sls deploy",
+    "sls:remove": "npx sls remove"
   },
   "dependencies": {
     "@codegenie/serverless-express": "^4.14.1",
@@ -80,7 +81,7 @@
       "<rootDir>/libs/"
     ],
     "moduleNameMapper": {
-      "^utils/calc(|/.*)$": "<rootDir>/libs/calc/src/$1"
+      "^@libs/calc(|/.*)$": "<rootDir>/libs/calc/src/$1"
     }
   }
 }

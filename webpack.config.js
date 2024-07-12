@@ -37,6 +37,7 @@ module.exports = (options, webpack) => {
       libraryTarget: 'commonjs2',
     },
     optimization: {
+      minimize: true,
       minimizer: [
         new TerserPlugin({
           terserOptions: {
