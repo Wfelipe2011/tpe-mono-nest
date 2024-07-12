@@ -1,9 +1,9 @@
 
 <p align="center">
   <a href="https://www.serverless.com/" target="blank"><img src="https://cdn.prod.website-files.com/60acbb950c4d6606963e1fed/60acbb950c4d66854e3e2013_logo%20serverless%20dark.svg" width="200" height="100" alt="Serverless Framework Logo" /></a>
-  <img width="200"/>
+  <img width="100"/>
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-  <img width="300"/>
+  <img width="200"/>
   <a href="https://webpack.js.org/" target="blank"><img src="https://webpack.js.org/assets/icon-square-big.svg" width="100" alt="Webpack Logo" /></a>
 </p>
 
