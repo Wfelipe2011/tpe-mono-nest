@@ -1,0 +1,23 @@
+provider:
+  profile: allied-homologa
+  stage: acp
+  environment:
+    NODE_ENV: prod
+
+plugins:
+  - serverless-dotenv-plugin
+
+custom:
+  serverless-dotenv-plugin:
+    logging: true
+
+functions:
+  main:
+    handler: dist/main.handler
+    events:
+      - http:
+          method: ANY
+          path: /
+      - http:
+          method: ANY
+          path: '{proxy+}'

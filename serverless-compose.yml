@@ -1,5 +1,3 @@
 services:
-  my-app-1:
-    path: apps/my-app-1
-  my-app-2:
-    path: apps/my-app-2
+  api:
+    path: apps/api

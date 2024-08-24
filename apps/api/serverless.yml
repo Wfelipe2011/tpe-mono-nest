@@ -1,0 +1,25 @@
+service: tpe-mono-nest
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-1
+  profile: ${file(sls-${opt:stage}.yml):provider.profile}
+  stage: ${opt:stage}
+  role: ${file(sls-${opt:stage}.yml):provider.role}
+  vpc: ${file(sls-${opt:stage}.yml):provider.vpc}
+  environment: ${file(sls-${opt:stage}.yml):provider.environment}
+  timeout: 30
+  stackTags:
+    owner: "Arquitetura"
+    project: "Pipe 2.0"
+
+    
+plugins: ${file(sls-${opt:stage}.yml):plugins} 
+
+custom: ${file(sls-${opt:stage}.yml):custom}
+
+functions: ${file(sls-${opt:stage}.yml):functions}
+
+package:
+  individually: true

@@ -19,11 +19,11 @@
     "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
     "paths": {
-      "@libs/calc": [
-        "libs/calc/src"
+      "@app/infra": [
+        "libs/infra/src"
       ],
-      "@libs/calc/*": [
-        "libs/calc/src/*"
+      "@app/infra/*": [
+        "libs/infra/src/*"
       ]
     }
   }
